@@ -1,2 +1,2 @@
 # pivet-academy
-pivet academy website code
+The code for pivet academy website
