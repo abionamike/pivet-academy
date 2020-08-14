@@ -1,0 +1,66 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+	<!-- ***** Breadcrumb Area Start ***** -->
+	  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/stat/blog/img/gallery/4.jpg' %});">
+	    <div class="container h-100">
+	      <div class="row h-100 align-items-center">
+	        <div class="col-12">
+	          <h2 class="title">News Update</h2>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="breadcumb--con">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-12">
+	          <nav aria-label="breadcrumb">
+	            <ol class="breadcrumb">
+	              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+	              <li class="breadcrumb-item active" aria-current="page">News</li>
+	            </ol>
+	          </nav>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- ***** Breadcrumb Area End ***** -->
+	<section class="externals">
+		<div class="container content-section">
+			<div class="media">
+			  <img  class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+			  <div class="media-body">
+			    <div class="article-metadata">
+			      <a class="mr-2" href="{% url 'news' %}" style="color: #00aeef; font-size: 17px;">{{ object.author }}</a>
+			      <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+			    </div>
+			    <a href="{% url 'news' %}"><h2 class="article-title">{{ object.title }}</h2></a>
+			  </div>
+			</div>
+			<p class="article-content pl-5">{{ object.content }}</p>
+			<hr class="ml-5">
+
+			<a class="btn btn-info ml-5" href="{% url 'add_comment_to_post' pk=post.pk %}">Add Comments</a>
+			{% for comment in post.comments.all %}
+			    {% if user.is_authenticated or comment.approved_comment %}
+			    <div class="comment pl-4">
+			        <div class="date">
+			            {{ comment.created_date }}
+			            {% if not comment.approved_comment %}
+			                <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+			                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+			            {% endif %}
+			        </div>
+			        <strong>{{ comment.name }}</strong>
+			        <p>{{ comment.body|linebreaks }}</p>
+			    </div>
+			    {% endif %}
+			{% empty %}
+			    <p class="pl-5">No comments here yet :(</p>
+			{% endfor %}  
+		</div>
+	</section>
+{%endblock content%}

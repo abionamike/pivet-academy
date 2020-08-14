@@ -1,0 +1,57 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+	
+	<!-- ***** Breadcrumb Area Start ***** -->
+	  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/stat/blog/img/gallery/4.jpg' %});">
+	    <div class="container h-100">
+	      <div class="row h-100 align-items-center">
+	        <div class="col-12">
+	          <h2 class="title">Sign In</h2>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="breadcumb--con">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-12">
+	          <nav aria-label="breadcrumb">
+	            <ol class="breadcrumb">
+	              <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a></li>
+	              <li class="breadcrumb-item active" aria-current="page">Sign In</li>
+	            </ol>
+	          </nav>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- ***** Breadcrumb Area End ***** -->
+	  <section class="externals">
+	  	<div class="container">
+			<div class="content-section">
+				<form method="POST">
+					{% csrf_token %}
+					<fieldset class="form-group">
+						<legend class="border-bottom mb-4">Log In</legend>
+						{{ form|crispy }}
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-outline-info" type="submit">Log In</button>
+					</div>
+					<div class="form-group">
+						<p>
+							Forgot Password? click <a href="{% url 'password_reset' %}" class = "text-info">here</a>
+						</p>
+					</div>
+				</form>
+				<div class="border-top pt-3">
+					<small class="text-secondary" style="font-size: 12px;">Need An Account? <a class = "ml-1 text-info" href="{% url 'register' %}">Sign Up Now</a>
+					</small>
+				</div>
+			</div>
+		</div>
+	  </section>
+	
+{%endblock content%}

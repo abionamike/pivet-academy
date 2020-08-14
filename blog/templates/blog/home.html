@@ -1,0 +1,494 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Welcome Area Start ***** -->
+  <section id="home" class="welcome-area">
+    <!-- Welcome Slides -->
+    <div class="welcome-slides owl-carousel">
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/hero-slider/1.jpg' %});">
+        <div class="container-fluid h-100">
+          <div class="row h-100 align-items-center"> <!--align-items-center-->
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="left-side">
+                      <div class="col-md-12">
+                        <h3 class="text-center">Latest News</h3>
+                        <div class="line"></div>
+                      </div>
+                      <div class="col-md-12">
+                        {% for post in three %}
+                          <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
+                          <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
+                            {% if user.is_authenticated  %}
+                              <a href="{% url 'news' %}">read more</a>
+                            {% else %}
+                              <a href="{% url 'login' %}">read more</a>
+                            {% endif %}  
+                          </p>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="right-side">
+                      <p data-animation="fadeInDown" data-delay="300ms" class="text-left">An INVESTMENT in</p>
+                      <p data-animation="fadeInDown" data-delay="100ms" class="h2 text-left">KNOWLEDGE</p>
+                      <p data-animation="fadeInUp" data-delay="300ms" class="text-center">Pays the best</p>
+                      <p data-animation="fadeInUp" data-delay="100ms" class="h2 text-right">INTEREST</p>
+                    </div>
+                    <div class="col-md-12 text-right">
+                      <div class="welcome-btn-group">
+                        <a href="{% url 'login' %}" class="btn dento-btn active" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!--  <div class="col-md-12">
+              <div class="text-center">
+                <p>What We Do</p>
+              </div>
+            </div> -->
+            <!-- <div class="col-md-12 text-center">
+              <a href="#service" class="btn dento-btn active mx-2">What We Do</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/hero-slider/landing5.jpg' %});">
+        <div class="container-fluid h-100">
+          <div class="row h-100 align-items-center"> <!--align-items-center-->
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="left-side">
+                      <div class="col-md-12">
+                        <h3 class="text-center">Latest News</h3>
+                        <div class="line"></div>
+                      </div>
+                      <div class="col-md-12">
+                        {% for post in three %}
+                          <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
+                          <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
+                            {% if user.is_authenticated  %}
+                              <a href="{% url 'news' %}">read more</a>
+                            {% else %}
+                              <a href="{% url 'login' %}">read more</a>
+                            {% endif %}  
+                          </p>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="right-side">
+                      <p data-animation="fadeInDown" data-delay="300ms" class="text-left">The cure for</p>
+                      <p data-animation="fadeInDown" data-delay="100ms" class="h2 text-left">BOREDOM</p>
+                      <p data-animation="fadeInDown" data-delay="100ms" class="text-left">is CURIOSITY,</p>
+                      <p data-animation="fadeInUp" data-delay="300ms" class="text-center">There is no cure for</p>
+                      <p data-animation="fadeInUp" data-delay="100ms" class="h2 text-right">CURIOSITY</p>
+                    </div>
+                    <div class="col-md-12 text-right">
+                      <div class="welcome-btn-group">
+                        <a href="{% url 'login' %}" class="btn dento-btn active" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-12 text-center pt-0">
+              <a href="#service" class="btn dento-btn active mx-2">What We Do</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/gallery/5.jpg' %});">
+        <div class="container-fluid h-100 ">
+          <div class="row h-100 align-items-center"> <!--align-items-center-->
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="left-side">
+                      <div class="col-md-12">
+                        <h3 class="text-center">Latest News</h3>
+                        <div class="line"></div>
+                      </div>
+                      <div class="col-md-12">
+                        {% for post in three %}
+                          <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
+                          <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
+                            {% if user.is_authenticated  %}
+                              <a href="{% url 'news' %}">read more</a>
+                            {% else %}
+                              <a href="{% url 'login' %}">read more</a>
+                            {% endif %}  
+                          </p>
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Welcome Text -->
+                  <div class="welcome-text">
+                    <div class="right-side">
+                      <p data-animation="fadeInDown" data-delay="300ms" class="text-left">An INVESTMENT in</p>
+                      <p data-animation="fadeInDown" data-delay="100ms" class="h2 text-left">KNOWLEDGE</p>
+                      <p data-animation="fadeInUp" data-delay="300ms" class="text-center">Pays the best</p>
+                      <p data-animation="fadeInUp" data-delay="100ms" class="h2 text-right">INTEREST</p>
+                    </div>
+                    <div class="col-md-12 text-right">
+                      <div class="welcome-btn-group">
+                        <a href="{% url 'login' %}" class="btn dento-btn active" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <!--  <div class="col-md-12">
+              <div class="text-center">
+                <p>What We Do</p>
+              </div>
+            </div> -->
+            <!-- <div class="col-md-12 text-center">
+              <a href="#service" class="btn dento-btn active mx-2">What We Do</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ***** Welcome Area End ***** -->
+
+  <section id="about" class="dento-about-us-area section-padding-100-0 offset">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- About Us Thumbnail -->
+          <div class="section-heading col-12 col-md-12 text-center">
+            <h2>About Us</h2>
+            <div class="line"></div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="about-us-thumbnail mb-50">
+              <img src="{% static 'blog/stat/blog/img/encroll-img.jpg' %}" alt="">
+            </div>
+          </div>
+          <!-- About Content -->
+          <div class="col-12 col-md-8">
+            <div class="about-us-content mb-50">
+              <!-- Section Heading -->
+              <p>Vestibulum condimentum, risus sedones honcus rutrum, salah lacus mollis zurna, nec finibusmi velit advertisis. Proin vitae odin quis magna aliquet laciniae. Etiam auctor, nisi vel. Pellentesque ultrices nisl quam iaculis, nec pulvinar
+                augue.pis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.Lorem ipsum dolor Lorem Vivamus interdum ultrices augue. Aenean dos cursus laniaipsum dolor
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- ****** About Us Area Start ******* -->
+
+
+  <section id="service" class="dento-about-us-area section-padding-100-0 offset">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- About Us Thumbnail -->
+
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>What We Do</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-12">
+          <h3 class="text-center pb-3"><i class="fa fa-hand-o-right"></i> Teach <i class="fa fa-hand-o-left"></i></h3>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <p> Lorem ipsum dolor  Lorem ipsum dolor sitdo amet, sitdo consectetur don Lorem ipsum dolor sitdo amet,t adipis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.Lorem ipsum dolor Lorem Vivamus interdum ultrices augue. Aenean dos cursus laniaipsum dolor sitdo amet,  sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="about-us-thumbnail mb-50">
+            <img src="{% static 'blog/stat/blog/img/gallery/6.jpg' %}" alt="1">
+          </div>
+        </div>
+        <div class="dento-border clearfix mb-4"></div>
+        <div class="col-12 col-md-12">
+          <h3 class="text-center pb-4"><i class="fa fa-hand-o-right"></i> Train <i class="fa fa-hand-o-left"></i></h3>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="about-us-thumbnail mb-50">
+            <img src="{% static 'blog/stat/blog/img/course/2.jpg' %}" alt="1">
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <p> Lorem ipsum dolor  Lorem ipsum dolor sitdo amet, sitdo consectetur don Lorem ipsum dolor sitdo amet,t adipis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.Lorem ipsum dolor Lorem Vivamus interdum ultrices augue. Aenean dos cursus laniaipsum dolor sitdo amet,  sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="dento-border clearfix mb-4"></div>
+        <div class="col-12 col-md-12">
+          <h3 class="text-center pb-4"><i class="fa fa-hand-o-right"></i> Mentor <i class="fa fa-hand-o-left"></i></h3>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <p> Lorem ipsum dolor  Lorem ipsum dolor sitdo amet, sitdo consectetur don Lorem ipsum dolor sitdo amet,t adipis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit.Lorem ipsum dolor Lorem Vivamus interdum ultrices augue. Aenean dos cursus laniaipsum dolor sitdo amet,  sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="about-us-thumbnail mb-50">
+            <img src="{% static 'blog/stat/blog/img/event/1.jpg' %}" alt="1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****** About Us Area End ****** -->
+
+  <div class="container">
+    <div class="dento-border clearfix"></div>
+    <div class="dento-border clearfix"></div>
+  </div>
+
+  <!-- Dento Service Area Start -->
+  <section class="dento-service-area bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'blog/stat/blog/img/fact-bg.jpg' %});">
+     <!-- Cool Facts Area Start -->
+    <div class="dento-cta-area">
+      <div class="container">
+        <div class="row">
+          <!-- Cool Facts Area -->
+          <div class="col-lg-3">
+            <div class="single-cta text-center mt-30 mb-40">
+              <i class="ti-crown"></i>
+              <h2><span class="counter">8</span>+</h2>
+              <h5>Years Of Experience</h5>
+            </div>
+          </div>
+
+          <!-- Cool Facts Area -->
+          <div class="col-lg-3">
+            <div class="single-cta text-center mt-30 mb-40">
+              <i class="ti-briefcase"></i>
+              <h2><span class="counter">10</span></h2>
+              <h5>Experienced Teacher</h5>
+            </div>
+          </div>
+
+          <!-- Cool Facts Area -->
+          <div class="col-lg-3">
+            <div class="single-cta text-center mt-30 mb-40">
+              <i class="ti-user"></i>
+              <h2><span class="counter">200</span>+</h2>
+              <h5>Happy Students</h5>
+            </div>
+          </div>
+
+          <!-- Cool Facts Area -->
+          <div class="col-lg-3">
+            <div class="single-cta text-center mt-30 mb-40">
+              <i class="ti-pencil-alt"></i>
+              <h2><span class="counter">15</span>+</h2>
+              <h5>Lessons</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cool Facts Area End -->
+
+  </section>
+  <!-- Dento Service Area End -->
+  
+  <!-- In place for the pricing section -->
+  <section id="testimonial" class="testimonials-area section-padding-100 offset jumbotron">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center black">
+            <h2>Testimonials</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- Testimonials Slides -->
+          <div class="testimonials-slides owl-carousel">
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'blog/img/bg-img/8.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+                <h5><i class="fa fa-quote-left pr-3" style="color: #00aeef;"></i>Lorem ipsum dolor Lorem ipsum dolor sitdo amet, sitdo consectetur don Lorem ipsum dolor sitdo amet,t adipis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet,</h5>
+                <p class="lead">- Jonathan Moon</p>
+                <p class="pl-2"><b>UNILAG, Jamb Score - 299</b></p>
+              </div>
+            </div>
+
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'blog/stat/blog/img/member/4.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+                <h5><i class="fa fa-quote-left pr-3" style="color: #00aeef;"></i>Vestibulum condimentum, risus sedones honcus rutrum, salah lacus mollis zurna, nec finibusmi velit advertisis. Proin vitae odin quis magna aliquet laciniae. Etiam auctor, nisi vel. Pellentesque ultrices nisl quam iaculis, nec pulvinar</h5>
+                <p class="lead">- Alisha Boe</p>
+                <p class="pl-2"><b>UNIBEN, Jamb Score - 281</b></p>
+              </div>
+            </div>
+
+            <!-- Single Testimonials Slide -->
+            <div class="single-testimonial-slide d-flex align-items-center">
+              <!-- Thumbnail -->
+              <div class="testimonial-thumb">
+                <img src="{% static 'blog/stat/blog/img/member/5.jpg' %}" alt="">
+              </div>
+              <!-- Content -->
+              <div class="testimonial-content">
+                <h5><i class="fa fa-quote-left pr-3" style="color: #00aeef;"></i>Lorem ipsum dolor Lorem ipsum dolor sitdo amet, sitdo consectetur don Lorem ipsum dolor sitdo amet,t adipis elit. Vivamus interdumultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet, consectetur dont adipis elit. Vivamus interdum ultrices augue. Aenean dos cursus lania.Lorem ipsum dolor sitdo amet,</h5>
+                <p class="lead">- Frank Lampard</p>
+                <p class="pl-2"><b>UNIJOS, Jamb Score - 351</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!--  <center>
+    <h2>Thanks {{ message_name }}!</h2>
+    <p>We received your email and will respond shortly..</p>
+  </center>
+  <br><br><br> -->
+  <section id="contact" class="dento-contact-area mt-50 mb-100 offset">
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center black">
+            <h2>Get In Touch</h2>
+            <div class="line"></div>
+            {% if message_name %}
+              <br><br>
+              <div class="alert alert-success">
+                Thanks <b>{{ message_name }}</b>, we received your email and will respond shortly! 
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-12 col-md-4">
+          <div class="contact-information">
+            <h5>Address:</h5>
+            <p>20, Solademi Lawal Street, Moonlight Bus Stop, Isuti, Egan, Lagos</p>
+
+            <h5>Phone:</h5>
+            <p>+234 8030501951</p>
+
+            <h5>Email:</h5>
+            <p>YK@gmail.com</p>
+
+            <h5>Social Media:</h5>
+            <p class="mb-0">
+              <a data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook pr-3"></i></a>
+              <a data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-instagram pr-3"></i></a>
+              <a data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-twitter pr-3"></i></a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-12 col-md-8">
+          <div class="contact-form">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <h3 class="pb-2">Drop Us A Message!</h3>
+              <div class="line"></div>
+            </div>
+            <!-- Form -->
+            <form action="#contact" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" name="message-email" class="form-control mb-30" placeholder="Your Email">
+                </div>
+                <div class="col-12">
+                  <textarea name="message-content" class="form-control mb-30" placeholder="Your Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn dento-btn2">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+{%endblock content%}
