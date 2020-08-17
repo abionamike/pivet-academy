@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ai_tacl1^l(_8r1b&vg1d^$cs_%zw(aa$^-fv%=o)5_a@lwitj'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -142,19 +142,9 @@ LOGOUT_URL = 'logout'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('email')
-EMAIL_HOST_PASSWORD = os.environ.get('pass')
-EMAIL_USE_SSL = True
-EMAIL_PORT = 465
-
-# EMAIL_USE_SSL = False
-
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL')
+EMAIL_HOST_PASSWORD = os.environ.get('PASS')
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465

@@ -9,7 +9,7 @@
     <!-- Welcome Slides -->
     <div class="welcome-slides owl-carousel">
       <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/hero-slider/1.jpg' %});">
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/img/hero-slider/1.jpg' %});">
         <div class="container-fluid h-100">
           <div class="row h-100 align-items-center"> <!--align-items-center-->
             <div class="col-md-4">
@@ -18,22 +18,18 @@
                   <!-- Welcome Text -->
                   <div class="welcome-text">
                     <div class="left-side">
-                      <div class="col-md-12">
-                        <h3 class="text-center">Latest News</h3>
-                        <div class="line"></div>
-                      </div>
-                      <div class="col-md-12">
-                        {% for post in three %}
-                          <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
-                          <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
-                            {% if user.is_authenticated  %}
-                              <a href="{% url 'news' %}">read more</a>
-                            {% else %}
-                              <a href="{% url 'login' %}">read more</a>
-                            {% endif %}  
-                          </p>
-                        {% endfor %}
-                      </div>
+                      <h3 class="text-center">Latest News</h3>
+                      <div class="line"></div>
+                      {% for post in three %}
+                        <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
+                        <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
+                          {% if user.is_authenticated  %}
+                            <a href="{% url 'news' %}">read more</a>
+                          {% else %}
+                            <a href="{% url 'login' %}">read more</a>
+                          {% endif %}  
+                        </p>
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
@@ -60,33 +56,21 @@
                 </div>
               </div>
             </div>
-           <!--  <div class="col-md-12">
-              <div class="text-center">
-                <p>What We Do</p>
-              </div>
-            </div> -->
-            <!-- <div class="col-md-12 text-center">
-              <a href="#service" class="btn dento-btn active mx-2">What We Do</a>
-            </div> -->
           </div>
         </div>
       </div>
 
       <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/hero-slider/landing5.jpg' %});">
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/img/hero-slider/3.jpg' %});">
         <div class="container-fluid h-100">
           <div class="row h-100 align-items-center"> <!--align-items-center-->
             <div class="col-md-4">
               <div class="row">
                 <div class="col-md-12">
-                  <!-- Welcome Text -->
                   <div class="welcome-text">
                     <div class="left-side">
-                      <div class="col-md-12">
                         <h3 class="text-center">Latest News</h3>
                         <div class="line"></div>
-                      </div>
-                      <div class="col-md-12">
                         {% for post in three %}
                           <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
                           <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
@@ -97,7 +81,6 @@
                             {% endif %}  
                           </p>
                         {% endfor %}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -124,14 +107,11 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-md-12 text-center pt-0">
-              <a href="#service" class="btn dento-btn active mx-2">What We Do</a>
-            </div> -->
           </div>
         </div>
       </div>
 
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/stat/blog/img/gallery/5.jpg' %});">
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url({% static 'blog/img/hero-slider/5.jpg' %});">
         <div class="container-fluid h-100 ">
           <div class="row h-100 align-items-center"> <!--align-items-center-->
             <div class="col-md-4">
@@ -140,22 +120,18 @@
                   <!-- Welcome Text -->
                   <div class="welcome-text">
                     <div class="left-side">
-                      <div class="col-md-12">
-                        <h3 class="text-center">Latest News</h3>
-                        <div class="line"></div>
-                      </div>
-                      <div class="col-md-12">
-                        {% for post in three %}
-                          <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
-                          <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
-                            {% if user.is_authenticated  %}
-                              <a href="{% url 'news' %}">read more</a>
-                            {% else %}
-                              <a href="{% url 'login' %}">read more</a>
-                            {% endif %}  
-                          </p>
-                        {% endfor %}
-                      </div>
+                      <h3 class="text-center">Latest News</h3>
+                      <div class="line"></div>
+                      {% for post in three %}
+                        <h4 class="hs-title post-title"><i class="fa fa-hand-o-right"></i> {{ post.title }}</h4>
+                        <p class="hs-des post-content">{{ post.content|truncatewords:"13" }}
+                          {% if user.is_authenticated  %}
+                            <a href="{% url 'news' %}">read more</a>
+                          {% else %}
+                            <a href="{% url 'login' %}">read more</a>
+                          {% endif %}  
+                        </p>
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
@@ -208,7 +184,7 @@
           </div>
           <div class="col-12 col-md-4">
             <div class="about-us-thumbnail mb-50">
-              <img src="{% static 'blog/stat/blog/img/encroll-img.jpg' %}" alt="">
+              <img src="{% static 'blog/img/about.jpg' %}" alt="">
             </div>
           </div>
           <!-- About Content -->
@@ -254,7 +230,7 @@
         </div>
         <div class="col-12 col-md-4">
           <div class="about-us-thumbnail mb-50">
-            <img src="{% static 'blog/stat/blog/img/gallery/6.jpg' %}" alt="1">
+            <img src="{% static 'blog/img/services/6.jpg' %}" alt="1">
           </div>
         </div>
         <div class="dento-border clearfix mb-4"></div>
@@ -263,7 +239,7 @@
         </div>
         <div class="col-12 col-md-4">
           <div class="about-us-thumbnail mb-50">
-            <img src="{% static 'blog/stat/blog/img/course/2.jpg' %}" alt="1">
+            <img src="{% static 'blog/img/services/2.jpg' %}" alt="1">
           </div>
         </div>
         <div class="col-12 col-md-8">
@@ -290,7 +266,7 @@
         </div>
         <div class="col-12 col-md-4">
           <div class="about-us-thumbnail mb-50">
-            <img src="{% static 'blog/stat/blog/img/event/1.jpg' %}" alt="1">
+            <img src="{% static 'blog/img/services/3.jpg' %}" alt="1">
           </div>
         </div>
       </div>
@@ -304,7 +280,7 @@
   </div>
 
   <!-- Dento Service Area Start -->
-  <section class="dento-service-area bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'blog/stat/blog/img/fact-bg.jpg' %});">
+  <section class="dento-service-area bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url({% static 'blog/img/fact-bg.jpg' %});">
      <!-- Cool Facts Area Start -->
     <div class="dento-cta-area">
       <div class="container">
@@ -372,7 +348,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="{% static 'blog/img/bg-img/8.jpg' %}" alt="">
+                <img src="{% static 'blog/img/testimonials/8.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -386,7 +362,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="{% static 'blog/stat/blog/img/member/4.jpg' %}" alt="">
+                <img src="{% static 'blog/img/testimonials/4.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -400,7 +376,7 @@
             <div class="single-testimonial-slide d-flex align-items-center">
               <!-- Thumbnail -->
               <div class="testimonial-thumb">
-                <img src="{% static 'blog/stat/blog/img/member/5.jpg' %}" alt="">
+                <img src="{% static 'blog/img/testimonials/5.jpg' %}" alt="">
               </div>
               <!-- Content -->
               <div class="testimonial-content">
@@ -414,12 +390,6 @@
       </div>
     </div>
   </section>
-
- <!--  <center>
-    <h2>Thanks {{ message_name }}!</h2>
-    <p>We received your email and will respond shortly..</p>
-  </center>
-  <br><br><br> -->
   <section id="contact" class="dento-contact-area mt-50 mb-100 offset">
     <div class="container">
       <div class="row">

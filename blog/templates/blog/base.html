@@ -5,7 +5,7 @@
 
 	<head>
 	  <meta charset="UTF-8">
-	  <meta name="description" content="Dento - Dentist &amp; Medical HTML Template">
+	  <meta name="description" content="Pivet - Academy">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,20 +17,13 @@
 
 	  <!-- Core Stylesheet -->
 
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/bootstrap.min.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/font-awesome.min.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/themify-icons.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/magnific-popup.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/animate.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/owl.carousel.css' %}">
-	  <link rel="stylesheet" type="text/css" href="{% static 'blog/stat/blog/css/style.css' %}">
-
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/default-assets/classy-nav.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/animate.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/owl.carousel.min.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/magnific-popup.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/font-awesome.min.css' %}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/themify-icons.css' %}">
 	  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style2.css' %}">
 
 	  <link rel="stylesheet" href="{% static 'blog/style.css' %}">
@@ -56,7 +49,7 @@
 	          			<nav class="classy-navbar justify-content-between " id="dentoNav">
 
 				            <!-- Logo -->
-				            <a class="nav-brand" href="#home"><img src="{% static 'blog/stat/blog/img/pivot-1.png' %}" height="10px" width="80px"></a>
+				            <a class="nav-brand" href="#home"><img src="{% static 'blog/img/pivot-1.png' %}" height="10px" width="80px"></a>
 
 				            <!-- Navbar Toggler -->
 				            <div class="classy-navbar-toggler">
@@ -92,14 +85,6 @@
 						                  <li><a href="{% url 'register' %}">Register</a></li>
 						                  <li><a href="{% url 'login' %}">Sigin</a></li>
 					                    {% endif %}
-					                  <!-- <li><a href="./contact.html">Students</a>
-					                    <ul class="dropdown">
-					                      <li><a href="blog.html">- Register</a></li>
-					                      <li><a href="blog-details.html">- Login In</a></li>
-					                      <li><a href="blog-details.html">- Login In</a></li>
-					                      <li><a href="blog-details.html">- Login In</a></li>
-					                    </ul>
-					                  </li> -->
 					                </ul>
 	              				</div>
 	              				<!-- Nav End -->
@@ -109,24 +94,17 @@
 	      		</div>
 	    	</div>
 	  	</header>
-			
-				{% block content %}{%endblock content%}
+	  	
+			{% block content %}{%endblock content%}
 
-		<!-- Book An Oppointment Area Start -->
-		  <!-- <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('img/bg-img/12.jpg');"> -->
-		      <!-- Contact Section -->
-		    
-		  <!-- </section> -->
-		  <!-- Book An Oppointment Area End -->
-
-		  <!-- ***** Footer Area Start ***** -->
-		  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/stat/blog/img/hero-slider/2.jpg' %});">
+		<!-- ***** Footer Area Start ***** -->
+		<footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/img/hero-slider/2.jpg' %});">
 		    <div class="container">
 		      <div class="row">
 		        <!-- Single Footer Widget -->
 		        <div class="col-12 col-md-4">
 		          <div class="single-footer-widget">
-		            <a href="./index.html" class="d-block mb-4"><img src=""><img src="{% static 'blog/stat/blog/img/pivot-1.png' %}" height="10px" width="80px"></a>
+		            <a href="./index.html" class="d-block mb-4"><img src=""><img src="{% static 'blog/img/pivot-1.png' %}" height="10px" width="80px"></a>
 		            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
 		            <div class="footer-contact">
 		              <p><i class="icon_pin"></i> 20, Solademi Lawal Street, Moonlight Bus Stop, Isuti, Egan, Lagos</p>
@@ -189,8 +167,8 @@
 		        </div>
 		      </div>
 		    </div>
-		  </footer>
-		  <!-- ***** Footer Area End ***** -->
+		</footer>
+		<!-- ***** Footer Area End ***** -->
 
 			 <!-- ******* All JS ******* -->
 	  <!-- jQuery js -->
@@ -203,15 +181,6 @@
 	  <script src="{% static 'blog/js/dento.bundle.js' %}"></script>
 	  <!-- Active js -->
 	  <script src="{% static 'blog/js/default-assets/active.js' %}"></script>
-
-
-	  <!--====== Javascripts & Jquery ======-->
-	  <script src="{% static 'blog/stat/blog/js/jquery-3.2.1.min.js' %}"></script>
-	  <script src="{% static 'blog/stat/blog/js/owl.carousel.min.js' %}"></script>
-	  <script src="{% static 'blog/stat/blog/js/jquery.countdown.js' %}"></script>
-	  <script src="{% static 'blog/stat/blog/js/masonry.pkgd.min.js' %}"></script>
-	  <script src="{% static 'blog/stat/blog/js/magnific-popup.min.js' %}"></script>
-	  <script src="{% static 'blog/stat/blog/js/main.js' %}"></script>
 
 	</body>
 

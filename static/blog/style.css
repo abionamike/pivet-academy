@@ -1,55 +1,3 @@
-/* ---------------------------------------------
-[Master Stylesheet]
-
-Template Name: Dento - Dentist & Medical Template
-Template Author: Colorlib
-Version: 1.0.0
-Last Update: Dec 05, 2018
-
----------------------------------------------
-[Tables of CSS Content]
-
-+ body
-  - 1.0 Reboot CSS
-  - 2.0 Spacing CSS
-  - 3.0 Preloader CSS
-  - 4.0 Heading CSS
-  - 5.0 Back To Top CSS
-  - 6.0 Buttons CSS
-  - 7.0 Header CSS
-  - 8.0 Hero CSS
-  - 9.0 Testimoial CSS
-  - 10.0 Dentist CSS
-  - 11.0 Appointment CSS
-  - 12.0 Pricing CSS
-  - 13.0 Service CSS
-  - 14.0 About CSS
-  - 15.0 Barfiller CSS
-  - 16.0 Breadcrumb CSS
-  - 17.0 Blog CSS
-  - 18.0 Widget CSS
-  - 19.0 Footer CSS
-  - 20.0 Contact CSS
-
-  ---------------------------------------------
-  [Color Codes]
-
-  $heading: #333333; [Heading Color]
-  $text: #707070; [Text Color]
-  $bg-gray: #f4f4f4; [Gray Background]
-  $primary: #00aeef; [Primary Color]
-  $white: #ffffff; [White Color]
-  $dark: #000; [Dark Color]
-  $border: #7450fe; [Border Color]
-  $hover: #00aeef; [Hover Color]
-  $footer: #191c1d; [Footer Color]
-  $secondary: #222222; [Secondary Color]
-
-  ---------------------------------------------
-  [Font Family]
-
-  'Montserrat', sans-serif;
---------------------------------------------- */
 /* Import Fonts & All CSS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
 
@@ -64,21 +12,13 @@ body {
   background: #fafafa;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   color: #333333;
   line-height: 1.4;
   font-weight: 600; }
 
-a,
-a:active,
-a:focus,
-a:hover {
+a, a:active, a:focus, a:hover {
   color: #333333;
   text-decoration: none;
   -webkit-transition-duration: 500ms;
@@ -109,13 +49,22 @@ ul {
 .welcome-text .left-side a {
   color: #00aeef;
 }
+.alert-section{
+  background: transparent;
+  width:70%;
+  margin: auto;
+}
 
 .content-section {
   background: #ffffff;
   padding: 20px 40px;
   border: 1px solid #dddddd;
+  width:70%;
+  height: 100%;
+  margin-top: 5px;
+  margin: auto;
   border-radius: 3px;
-  margin-bottom: 80px;}
+  margin-bottom: 50px;}
   .content-section .author { 
     color: #00aeef;
     font-size: 13px; }
@@ -151,16 +100,16 @@ ul {
     @media only screen and (max-width: 767px) {
       .content-section {
         padding: 10px 15px;
-        width: 90%;
+        width: 100%;
       }
       .content-section .author {
         font-size: 12px;
       }
       .content-section .article-title {
-        font-size: 15px;
+        font-size: 20px;
       }
       .content-section .article-content {
-         font-size: 11px;
+         font-size: 12px;
       }
       .content-section .account-heading {
         font-size: 22px;
@@ -175,16 +124,9 @@ ul {
 .externals .article-img {
   height: 95px;
   width: 95px;
+  border: 1px solid #cccccc;
   margin-right: 12px;}
-    @media only screen and (max-width: 767px) {
-      .content-section {
-        width: 90%;
-      }
-      .externals .article-img {
-        height: 65px;
-        width: 65px;
-        margin-right: 7px;
-      } }
+
 
 .bg-overlay {
   position: relative;
@@ -665,6 +607,7 @@ ul {
 
 .welcome-text {
   position: relative;
+  width: 100%;
   z-index: 1; }
   .welcome-text .right-side .h2 {
     font-size: 75px;
@@ -695,10 +638,15 @@ ul {
 
     @media only screen and (max-width: 394px) {
       .welcome-text .right-side .h2 {
-        font-size: 20px;
-        margin-bottom: 0px;
+        font-size: 25px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 1px; 
       } }
 
+  .welcome-text .left-side {
+    width: 100%;
+  }
   .welcome-text .left-side h3{
     font-size: 30px;
     color: #ffffff;
@@ -886,198 +834,6 @@ ul {
       margin-bottom: 0;
       color: #555555; }
 
-.single-dentist-area {
-  position: relative;
-  z-index: 1;
-  background-color: #f4f4f4;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms; }
-  .single-dentist-area .dentist-content {
-    position: absolute;
-    width: 100%;
-    bottom: 0; }
-    .single-dentist-area .dentist-content .dentist-social-info {
-      text-align: center;
-      margin-bottom: 30px;
-      opacity: 0;
-      visibility: hidden;
-      -webkit-transition-duration: 500ms;
-      -o-transition-duration: 500ms;
-      transition-duration: 500ms; }
-      .single-dentist-area .dentist-content .dentist-social-info a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.15);
-        font-size: 14px;
-        text-align: center;
-        line-height: 40px;
-        color: #00aeef;
-        margin: 0 7px; }
-        .single-dentist-area .dentist-content .dentist-social-info a:focus, .single-dentist-area .dentist-content .dentist-social-info a:hover {
-          background-color: #00aeef;
-          color: #ffffff; }
-    .single-dentist-area .dentist-content .dentist-info {
-      width: 100%;
-      padding: 10px 15px;
-      text-align: center; }
-      .single-dentist-area .dentist-content .dentist-info h5 {
-        color: #ffffff;
-        font-size: 18px;
-        margin-bottom: 0; }
-      .single-dentist-area .dentist-content .dentist-info p {
-        color: #ffffff;
-        margin-bottom: 0; }
-  .single-dentist-area:focus .dentist-content .dentist-social-info, .single-dentist-area:hover .dentist-content .dentist-social-info {
-    opacity: 1;
-    visibility: visible; }
-
-.appointment-form {
-  position: relative;
-  z-index: 1; }
-  .appointment-form .form-control {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    border: none;
-    color: #ffffff;
-    font-size: 12px;
-    padding: 0 30px;
-    font-style: italic; }
-    .appointment-form .form-control:focus {
-      box-shadow: none; }
-  .appointment-form select {
-    appearance: none;
-    -moz-appearance: none; }
-    .appointment-form select option {
-      width: 100%;
-      height: 40px;
-      background-color: #ffffff;
-      color: #333333; }
-  .appointment-form textarea.form-control {
-    padding: 30px;
-    height: 120px; }
-
-.dento-pricing-table-area {
-  position: relative;
-  z-index: 1; }
-
-.dento-price-table {
-  position: relative;
-  z-index: 1; }
-  .dento-price-table table thead tr > td,
-  .dento-price-table table thead tr > th {
-    background-color: #00aeef;
-    color: #ffffff; }
-  .dento-price-table table tr > td,
-  .dento-price-table table tr > th {
-    padding: 15px 30px;
-    border-radius: 3px;
-    border: 4px solid #ffffff;
-    background-color: #f4f4f4;
-    font-weight: 600;
-    color: #707070; }
-    @media only screen and (max-width: 767px) {
-      .dento-price-table table tr > td,
-      .dento-price-table table tr > th {
-        padding: 10px 15px;
-        font-size: 12px; } }
-
-.single-service {
-  position: relative;
-  z-index: 1; }
-  .single-service img {
-    display: block;
-    margin-bottom: 15px;
-    max-height: 35px; }
-  .single-service h6 {
-    color: #ffffff;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    margin-bottom: 0;
-    font-weight: 400; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .single-service h6 {
-        font-size: 13px; } }
-  .single-service:focus h6, .single-service:hover h6 {
-    color: #00aeef; }
-
-.single-service--area {
-  position: relative;
-  z-index: 1; }
-  .single-service--area .icon-- {
-    position: relative;
-    z-index: 1;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px; }
-    .single-service--area .icon-- img {
-      position: absolute;
-      max-height: 35px;
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-  .single-service--area h5 {
-    margin-bottom: 15px;
-    display: block; }
-  .single-service--area p {
-    font-weight: 500; }
-  .single-service--area:focus .icon--, .single-service--area:hover .icon-- {
-    box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.15); }
-
-.dento-video-area {
-  position: relative;
-  z-index: 1; }
-  .dento-video-area img {
-    width: 100%; }
-  .dento-video-area .video-play-button {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    color: #ffffff;
-    background-color: #00aeef;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    margin-top: -30px;
-    margin-left: -30px;
-    text-align: center;
-    line-height: 60px;
-    font-size: 20px; }
-    .dento-video-area .video-play-button:focus, .dento-video-area .video-play-button:hover {
-      background-color: #000;
-      color: #ffffff; }
-
-.single-skills-area {
-  position: relative;
-  z-index: 1; }
-  .single-skills-area h6 {
-    font-size: 18px;
-    display: block;
-    margin-bottom: 12px; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .single-skills-area h6 {
-        font-size: 14px; } }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .single-skills-area h6 {
-        font-size: 14px; } }
-    @media only screen and (max-width: 767px) {
-      .single-skills-area h6 {
-        font-size: 14px; } }
-
 .dento-border {
   position: relative;
   z-index: 1;
@@ -1127,41 +883,6 @@ ul {
     @media only screen and (max-width: 767px) {
       .single-cta h5 {
         font-size: 16px; } }
-
-.barfiller {
-  width: 100%;
-  height: 10px;
-  background-color: #f4f4f4;
-  border: none;
-  position: relative;
-  z-index: 1; }
-  .barfiller .fill {
-    display: block;
-    position: relative;
-    width: 0;
-    height: 100%;
-    background: #333;
-    z-index: 1; }
-  .barfiller .tipWrap {
-    display: none; }
-  .barfiller .tip {
-    margin-top: -35px;
-    padding: 0;
-    font-size: 16px;
-    color: #333333;
-    font-weight: 600;
-    left: 0;
-    position: absolute;
-    z-index: 2;
-    background: transparent;
-    right: 0;
-    text-align: right; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .barfiller .tip {
-        font-size: 14px;
-        margin-top: -30px; } }
-    .barfiller .tip::after {
-      display: none; }
 
 .breadcumb-area {
   position: relative;
@@ -1220,150 +941,6 @@ ul {
     content: "\f105";
     font-family: 'FontAwesome'; }
 
-.single-blog-item {
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1); }
-  .single-blog-item .blog-content {
-    background-color: #ffffff;
-    padding: 30px; }
-    .single-blog-item .blog-content .post-title {
-      font-size: 20px;
-      font-weight: 700;
-      display: block;
-      margin-bottom: 10px; }
-      .single-blog-item .blog-content .post-title:focus, .single-blog-item .blog-content .post-title:hover {
-        color: #00aeef; }
-      @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        .single-blog-item .blog-content .post-title {
-          font-size: 16px; } }
-    .single-blog-item .blog-content p {
-      font-weight: 500; }
-    .single-blog-item .blog-content .post-meta a {
-      display: inline-block;
-      color: #b7b7b7;
-      margin-right: 15px; }
-      .single-blog-item .blog-content .post-meta a i {
-        color: #00aeef; }
-      .single-blog-item .blog-content .post-meta a:last-child {
-        margin-right: 0; }
-      .single-blog-item .blog-content .post-meta a:focus, .single-blog-item .blog-content .post-meta a:hover {
-        color: #00aeef; }
-  .single-blog-item.style-2 {
-    box-shadow: none; }
-    .single-blog-item.style-2 .blog-content,
-    .single-blog-item.style-2 .blog-thumbnail {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
-      width: 50%; }
-      @media only screen and (max-width: 767px) {
-        .single-blog-item.style-2 .blog-content,
-        .single-blog-item.style-2 .blog-thumbnail {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-          max-width: 100%;
-          width: 100%; } }
-
-.dento-pagination {
-  position: relative;
-  z-index: 1; }
-  .dento-pagination .pagination .page-item .page-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 3px;
-    padding: 0;
-    line-height: 38px;
-    margin: 0 5px;
-    text-align: center;
-    background-color: transparent;
-    color: #707070;
-    font-size: 16px; }
-    .dento-pagination .pagination .page-item .page-link:focus, .dento-pagination .pagination .page-item .page-link:hover {
-      background-color: #00aeef;
-      border-color: #00aeef;
-      color: #ffffff; }
-  .dento-pagination .pagination .page-item.active .page-link {
-    background-color: #00aeef;
-    border-color: #00aeef;
-    color: #ffffff; }
-
-.comment_area {
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
-  padding-top: 30px; }
-  .comment_area .title {
-    margin-bottom: 50px; }
-  .comment_area .comment-content {
-    position: relative;
-    z-index: 1;
-    background-color: #f4f4f4;
-    margin-bottom: 30px;
-    padding: 30px; }
-    @media only screen and (max-width: 767px) {
-      .comment_area .comment-content {
-        margin-bottom: 20px;
-        padding: 20px; } }
-    .comment_area .comment-content .comment-author {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 70px;
-      flex: 0 0 70px;
-      width: 70px;
-      max-width: 70px;
-      margin-right: 20px;
-      border-radius: 50%; }
-      @media only screen and (max-width: 767px) {
-        .comment_area .comment-content .comment-author {
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 50px;
-          flex: 0 0 50px;
-          width: 50px;
-          max-width: 50px;
-          margin-right: 10px; } }
-      .comment_area .comment-content .comment-author img {
-        border-radius: 50%; }
-    .comment_area .comment-content .comment-meta .post-author {
-      margin-bottom: 10px;
-      display: block;
-      color: #333333;
-      font-size: 18px;
-      font-weight: 500; }
-      @media only screen and (max-width: 767px) {
-        .comment_area .comment-content .comment-meta .post-author {
-          font-size: 14px; } }
-      .comment_area .comment-content .comment-meta .post-author span {
-        font-size: 12px;
-        color: #707070; }
-        @media only screen and (max-width: 767px) {
-          .comment_area .comment-content .comment-meta .post-author span {
-            font-size: 10px; } }
-      .comment_area .comment-content .comment-meta .post-author:focus, .comment_area .comment-content .comment-meta .post-author:hover {
-        color: #00aeef; }
-    .comment_area .comment-content .comment-meta p {
-      margin-bottom: 15px;
-      font-size: 14px;
-      line-height: 2;
-      font-weight: 500; }
-      @media only screen and (max-width: 767px) {
-        .comment_area .comment-content .comment-meta p {
-          font-size: 12px; } }
-    .comment_area .comment-content .comment-meta .comment-reply {
-      font-size: 14px;
-      color: #333333;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700; }
-      @media only screen and (max-width: 767px) {
-        .comment_area .comment-content .comment-meta .comment-reply {
-          font-size: 12px; } }
-      .comment_area .comment-content .comment-meta .comment-reply:focus, .comment_area .comment-content .comment-meta .comment-reply:hover {
-        color: #00aeef; }
-  .comment_area .children {
-    margin-left: 50px; }
-    .comment_area .children .single_comment_area:last-of-type {
-      margin-bottom: 0; }
 
 .single-widget-area {
   position: relative;
@@ -1398,145 +975,6 @@ ul {
     font-size: 16px;
     color: #707070; }
 
-.catagories-list {
-  position: relative;
-  z-index: 1; }
-  .catagories-list li a {
-    display: block;
-    padding: 15px 0;
-    font-size: 16px;
-    color: #707070;
-    font-weight: 500;
-    border-bottom: 1px solid #ebebeb; }
-    @media only screen and (max-width: 767px) {
-      .catagories-list li a {
-        font-size: 14px; } }
-    .catagories-list li a:focus, .catagories-list li a:hover {
-      color: #00aeef; }
-  .catagories-list li:last-child a {
-    border-bottom: none; }
-
-.single-news-area {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px; }
-  .single-news-area:last-child {
-    margin-bottom: 0; }
-  .single-news-area .blog-thumbnail {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 90px;
-    flex: 0 0 90px;
-    max-width: 90px;
-    width: 90px; }
-  .single-news-area .blog-content {
-    margin-left: 20px; }
-    .single-news-area .blog-content .post-title {
-      font-size: 14px;
-      color: #333333;
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 600; }
-      .single-news-area .blog-content .post-title:focus, .single-news-area .blog-content .post-title:hover {
-        color: #00aeef; }
-    .single-news-area .blog-content .post-date {
-      color: #b7b7b7;
-      display: block;
-      margin-bottom: 0;
-      font-size: 12px; }
-
-.blog-details-area {
-  position: relative;
-  z-index: 1; }
-  .blog-details-area img {
-    margin-bottom: 30px; }
-  .blog-details-area h2 {
-    font-size: 32px;
-    display: block;
-    margin-bottom: 15px; }
-    @media only screen and (max-width: 767px) {
-      .blog-details-area h2 {
-        font-size: 20px; } }
-  .blog-details-area .post-meta {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px; }
-    .blog-details-area .post-meta a {
-      display: inline-block;
-      color: #b7b7b7;
-      margin-right: 15px; }
-      .blog-details-area .post-meta a i {
-        color: #00aeef; }
-      .blog-details-area .post-meta a:last-child {
-        margin-right: 0; }
-      .blog-details-area .post-meta a:focus, .blog-details-area .post-meta a:hover {
-        color: #00aeef; }
-  .blog-details-area p {
-    margin-bottom: 30px;
-    font-weight: 500; }
-
-.dento-blockquote {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px; }
-  .dento-blockquote .icon {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 70px;
-    flex: 0 0 70px;
-    max-width: 70px;
-    width: 70px; }
-    .dento-blockquote .icon i {
-      font-size: 48px;
-      color: #b7b7b7; }
-  .dento-blockquote .text h5 {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 15px;
-    color: #707070;
-    line-height: 1.7;
-    font-weight: 400; }
-    @media only screen and (max-width: 767px) {
-      .dento-blockquote .text h5 {
-        font-size: 16px; } }
-  .dento-blockquote .text h6 {
-    color: #333333;
-    font-size: 18px; }
-    .dento-blockquote .text h6 span {
-      font-size: 12px;
-      color: #00aeef; }
-    @media only screen and (max-width: 767px) {
-      .dento-blockquote .text h6 {
-        font-size: 16px; } }
-
-.post-share-area a {
-  display: inline-block;
-  width: 120px;
-  height: 46px;
-  border-radius: 3px;
-  background-color: #00aeef;
-  line-height: 46px;
-  color: #ffffff;
-  margin-right: 10px;
-  text-align: center; }
-  .post-share-area a i {
-    margin-right: 5px; }
-  @media only screen and (max-width: 767px) {
-    .post-share-area a {
-      width: 68px;
-      height: 36px;
-      line-height: 36px;
-      font-size: 11px;
-      margin-right: 0; } }
-  .post-share-area a:last-child {
-    margin-right: 0; }
-  .post-share-area a.facebook {
-    background-color: #4b6cd0; }
-  .post-share-area a.tweet {
-    background-color: #49a7f3; }
-  .post-share-area a.google-plus {
-    background-color: #d34836; }
-  .post-share-area a.pinterest {
-    background-color: #bd081c; }
-
 .search-widget-area form {
   position: relative;
   z-index: 1; }
@@ -1569,17 +1007,6 @@ ul {
   border-bottom: 1px solid #ffffff;
   padding: 0 0 5px; }
 
-.dont-miss-post-content > a {
-  font-size: 16px;
-  color: #ffffff;
-  display: block;
-  margin-top: 15px; }
-.dont-miss-post-content > span {
-  font-size: 12px;
-  color: #ffffff;
-  display: block;
-  text-transform: uppercase; }
-
 .subscribe-form input {
   width: 100%;
   height: 45px;
@@ -1607,7 +1034,8 @@ ul {
 .footer-area {
   position: relative;
   z-index: 1;
-  padding-top: 100px; }
+  padding-top: 80px;
+  margin-top: 60px; }
 
 .single-footer-widget {
   position: relative;

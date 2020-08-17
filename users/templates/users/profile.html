@@ -4,7 +4,7 @@
 {% block content %}
 
 	<!-- ***** Breadcrumb Area Start ***** -->
-	  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/stat/blog/img/gallery/4.jpg' %});">
+	<div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'blog/img/services/4.jpg' %});">
 	    <div class="container h-100">
 	      <div class="row h-100 align-items-center">
 	        <div class="col-12">
@@ -12,8 +12,8 @@
 	        </div>
 	      </div>
 	    </div>
-	  </div>
-	  <div class="breadcumb--con">
+	</div>
+	<div class="breadcumb--con">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col-12">
@@ -26,15 +26,23 @@
 	        </div>
 	      </div>
 	    </div>
-	  </div>
+	</div>
 	  <!-- ***** Breadcrumb Area End ***** -->
 	<section class="externals">
 		<div class="container">
+			<div class="alert-section">
+	  			{% if messages %}
+			      	{% for message in messages %}
+			      		<div class="alert alert-{{ message.tags }}">
+			      			{{ message }}
+			      		</div>
+		      		{% endfor %}
+		      	{% endif %}
+	  		</div>
 			<div class="content-section">
 			    <div class="media">
 					<img  class="rounded-circle article-img" src="{{ user.profile.image.url }}">
 					<div class="media-body">
-						<!-- <p class="article-title">{{ user.username }}</p> -->
 				    	<h2 class="account-heading">{{ user.username }}</h2>
 	      				<p class="email text-secondary">{{ user.email }}</p>
 				  	</div>
